@@ -9,6 +9,7 @@ public class Player2Controller : MonoBehaviour
     float xR = 0f;
     public CharacterController controller;
     public float SPD = 12f;
+    private Vector2 Movement;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,12 +25,11 @@ public class Player2Controller : MonoBehaviour
         xR = Mathf.Clamp(xR, -120f, 120f);
         transform.localRotation = Quaternion.Euler(xR, 0f, 0f);
         rotation.Rotate(Vector3.up * X);
-
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         Vector3 movement = transform.right * x + transform.forward * z;
         controller.Move(movement * SPD * Time.deltaTime);
 
-        
+
     }
 }
