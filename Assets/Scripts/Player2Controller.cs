@@ -2,34 +2,63 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Player2Controller : MonoBehaviour
 {
-    public float sensitivity = 100f;
-    public Transform rotation;
-    float xR = 0f;
+    public int health = 100;
+    public float Damage = 10f;
+    public float range = 20f;
     public CharacterController controller;
     public float SPD = 12f;
-    private Vector2 Movement;
-    // Start is called before the first frame update
-    void Start()
+    public float Gravity = -9.81f;
+    Vector3 velocity;
+    public Camera cam;
+    public Transform GroundCheck;
+    public float groundDis = 0.4f;
+    public LayerMask ground;
+    bool Grounded;
+    public float Jump = 3f;
+    private void Start()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        float X = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
-        float Y = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
-        xR -= Y;
-        xR = Mathf.Clamp(xR, -120f, 120f);
-        transform.localRotation = Quaternion.Euler(xR, 0f, 0f);
-        rotation.Rotate(Vector3.up * X);
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-        Vector3 movement = transform.right * x + transform.forward * z;
-        controller.Move(movement * SPD * Time.deltaTime);
+        float X = Input.GetAxis("Horizontal");
+        float Z = Input.GetAxis("Vertical");
+        Vector3 Moving = transform.right * X + transform.forward * Z;
+        controller.Move(Moving*SPD*Time.deltaTime);
+        velocity.y += Gravity * Time.deltaTime;
+        controller.Move(velocity*Time.deltaTime);
+        Grounded = Physics.CheckSphere(GroundCheck.position,groundDis,ground);
+        if(Grounded&&velocity.y<0)
+        {
+            velocity.y = -2f;
+        }
+        if(Input.GetButtonDown("Jump")&& Grounded)
+        {
+            velocity.y = Mathf.Sqrt(Jump * -2f * Gravity);
+        }
+
+        //Shlash
+        if(Input.GetButtonDown("Fire1"))
+        {
+            Slashing();
+        }
+        void Slashing()
+        {
+            RaycastHit slash;
+            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out slash, range))
+            {
+                Debug.Log(slash.transform.name);
 
 
+                EnemyHealth EnemyHp = slash.transform.GetComponent<EnemyHealth>();
+                if(EnemyHp !=null)
+                {
+                    EnemyHp.DamageToHealth(Damage);
+                }
+            }
+        }
     }
 }

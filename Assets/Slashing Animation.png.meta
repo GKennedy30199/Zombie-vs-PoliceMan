@@ -1,0 +1,233 @@
+fileFormatVersion: 2
+guid: 658f668adc58f884283425cb891b6070
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7007399440463660491
+    second: Slashing Animation_0
+  - first:
+      213: -5445977274487179775
+    second: Slashing Animation_1
+  - first:
+      213: 4840410709537020820
+    second: Slashing Animation_2
+  - first:
+      213: 7190649574410254215
+    second: Slashing Animation_3
+  - first:
+      213: -193734301750743265
+    second: Slashing Animation_4
+  - first:
+      213: -5344877832029349757
+    second: Slashing Animation_5
+  - first:
+      213: -2239612795306072734
+    second: Slashing Animation_6
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Slashing Animation_1
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3bfb628ddd6ca4dbaa080c3c700339
+      internalID: -5445977274487179775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slashing Animation_5
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 25
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b57bf7feb54114f82ed17bbf48430f
+      internalID: -5344877832029349757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slashing Animation_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 125
+        width: 51
+        height: 54
+      alignment: 9
+      pivot: {x: 0.47148365, y: 0.47306767}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d313712b56d8f40b652ec8a26878fc
+      internalID: 7007399440463660491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slashing Animation_2
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 21
+        width: 71
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b2e2906f6b51584dbd626ab84251586
+      internalID: 4840410709537020820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -81, y: 22}
+      - {x: -81, y: 82}
+      - {x: -18, y: 82}
+      - {x: -18, y: 22}
+    - - {x: 19, y: 21}
+      - {x: 19, y: 85}
+      - {x: 91, y: 85}
+      - {x: 91, y: 21}
+    - - {x: -83, y: -81}
+      - {x: -83, y: -14}
+      - {x: -6, y: -14}
+      - {x: -6, y: -81}
+    - - {x: 18, y: -87}
+      - {x: 18, y: -15}
+      - {x: 86, y: -15}
+      - {x: 86, y: -87}
+    physicsShape: []
+    bones: []
+    spriteID: c859895db5ad1814c8bdae71c49a4a4b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
