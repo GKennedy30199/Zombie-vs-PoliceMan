@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class Player2Controller : MonoBehaviour
 {
-    public int health = 100;
+    public int Maxhealth = 100;
+    public int CurrentHealth;
     public float Damage = 10f;
     public float range = 20f;
     public CharacterController controller;
@@ -18,12 +19,15 @@ public class Player2Controller : MonoBehaviour
     public LayerMask ground;
     bool Grounded;
     public float Jump = 3f;
+    public Healthbar healthbar;
     private void Start()
     {
-        
+        CurrentHealth = Maxhealth;
+        healthbar.SetMaxHealth(Maxhealth);
     }
     private void Update()
     {
+        
         float X = Input.GetAxis("Horizontal");
         float Z = Input.GetAxis("Vertical");
         Vector3 Moving = transform.right * X + transform.forward * Z;
@@ -60,5 +64,17 @@ public class Player2Controller : MonoBehaviour
                 }
             }
         }
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            TakeDamage(10);
+        }
+    }
+    void TakeDamage(int damage)
+    {
+        CurrentHealth -= damage;
+        healthbar.SetHealth(CurrentHealth);
     }
 }
